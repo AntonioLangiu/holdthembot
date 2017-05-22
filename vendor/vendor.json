@@ -7,6 +7,12 @@
 			"path": "github.com/go-telegram-bot-api/telegram-bot-api",
 			"revision": "afe64e63be7f4c259261f3fb38dfe8b41f218e38",
 			"revisionTime": "2017-05-21T22:20:11Z"
+		},
+		{
+			"checksumSHA1": "t8jzPFIv4DNACv+cuZoigNmjPLQ=",
+			"path": "github.com/technoweenie/multipartstreamer",
+			"revision": "a90a01d73ae432e2611d178c18367fbaa13e0154",
+			"revisionTime": "2013-10-20T00:18:33Z"
 		}
 	],
 	"rootPath": "github.com/AntonioLangiu/holdthembot"
