@@ -13,9 +13,9 @@ func RouteMessages(ctx *BotContext) {
         if update.Message.IsCommand() {
 			routeCommand(update, ctx)
         } else if update.Message.VideoNote != nil {
-            ResendVideo(update, ctx)
+            go ResendVideo(update, ctx)
         } else if update.Message.Voice != nil {
-            ResendAudio(update, ctx)
+            go ResendAudio(update, ctx)
 		} else if update.Message.Text == "" {
 			routeInvalid(update, ctx)
 		}
