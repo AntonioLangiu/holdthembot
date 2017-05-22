@@ -2,8 +2,9 @@ package bot
 
 import (
 	"github.com/AntonioLangiu/holdthembot/common"
-	"gopkg.in/telegram-bot-api.v4"
+	"github.com/go-telegram-bot-api/telegram-bot-api"
 	"log"
+    "os"
 )
 
 type BotContext struct {
@@ -13,11 +14,22 @@ type BotContext struct {
 }
 
 func LoadBot(configuration *common.Configuration) {
-	ctx := InitBot(configuration)
+	ctx := initBot(configuration)
+    initFolder(ctx)
 	RouteMessages(ctx)
 }
 
-func InitBot(configuration *common.Configuration) *BotContext {
+func initFolder(ctx *BotContext) {
+    if _, err := os.Stat(ctx.Config.TempFolder); ! os.IsNotExist(err) {
+        os.RemoveAll(ctx.Config.TempFolder)
+    }
+    err := os.Mkdir(ctx.Config.TempFolder, 0777)
+    if err != nil {
+        log.Fatal(err)
+    }
+}
+
+func initBot(configuration *common.Configuration) *BotContext {
 	ctx := BotContext{}
 	ctx.Config = configuration
 

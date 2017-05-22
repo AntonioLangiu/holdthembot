@@ -1,7 +1,7 @@
 package bot
 
 import (
-	"gopkg.in/telegram-bot-api.v4"
+    "github.com/go-telegram-bot-api/telegram-bot-api"
 )
 
 func SendText(update tgbotapi.Update, ctx *BotContext, text string) {
@@ -11,19 +11,19 @@ func SendText(update tgbotapi.Update, ctx *BotContext, text string) {
 }
 
 func StartMessage(update tgbotapi.Update, ctx *BotContext) {
-	out := "Ciao! Sono HKNBot, il 🤖  dell'Associazione IEEE-Eta Kappa Nu" +
-		" del Politecnico di Torino. Organizziamo Eventi e Gruppi di" +
-		" studio, e tramite me potrai avere tutte le informazioni" +
-		" di cui hai bisogno 👍  Sono un Bot testuale, per cui scrivimi e" +
-		" e cercherò di risponderti!"
+	out := "Hi! I'm <b>HoldThemBot</b> 🤖  and I will help you to "
+    out += "<b>download voice and video messages</b> as files.\n"
+    out += "It's easy, just send me audio and video messages and "
+    out += "I will send them back to you!\nHave fun! 😊"
     SendText(update, ctx, out)
 }
 
 func HelpMessage(update tgbotapi.Update, ctx *BotContext) {
-	out := "Sono un bot testuale, basato sull'"
-	out += "NLP, meglio conosciuta come "
-	out += "elaborazione del linguaggio naturale.\n"
-	out += "Per comunicare con me puoi scrivermi frasi e io "
-	out += "cercherò di risponderti al meglio! 😊\n"
+    out := "I will help you to download <b>voice</b> and "
+    out += "video messages! Just send them to me and I will "
+    out += "send you them back as a file!\n"
+    out += "You can also forward voice and video from other "
+    out += "chats and get them as a file! Try me, send me a "
+    out += "video message now!!🤖"
 	SendText(update, ctx, out)
 }

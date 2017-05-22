@@ -3,35 +3,11 @@
 	"ignore": "test",
 	"package": [
 		{
-			"checksumSHA1": "sEv9k4Ej4neveeet6eSvQtQ2gA4=",
-			"path": "github.com/marcossegovia/apiai-go",
-			"revision": "a4773d3deba5d171aa5a9d5bbf53a0a28fc2c69d",
-			"revisionTime": "2017-05-12T16:22:24Z"
-		},
-		{
-			"checksumSHA1": "t8jzPFIv4DNACv+cuZoigNmjPLQ=",
-			"path": "github.com/technoweenie/multipartstreamer",
-			"revision": "a90a01d73ae432e2611d178c18367fbaa13e0154",
-			"revisionTime": "2013-10-20T00:18:33Z"
-		},
-		{
-			"checksumSHA1": "uSSUBdF7Kc5HH4CYwRVlL76QmRA=",
-			"path": "github.com/tidwall/gjson",
-			"revision": "0623bd8fbdbf97cc62b98d15108832851a658e59",
-			"revisionTime": "2017-05-11T03:52:25Z"
-		},
-		{
-			"checksumSHA1": "qmePMXEDYGwkAfT9QvtMC58JN/E=",
-			"path": "github.com/tidwall/match",
-			"revision": "173748da739a410c5b0b813b956f89ff94730b4c",
-			"revisionTime": "2016-08-30T17:39:30Z"
-		},
-		{
-			"checksumSHA1": "AzeP9gpBdHRcPQ5ozBpkBcqfInk=",
-			"path": "gopkg.in/telegram-bot-api.v4",
-			"revision": "0a57807db79efce7f6719fbb2c0e0f83fda79aec",
-			"revisionTime": "2016-11-25T05:50:35Z"
+			"checksumSHA1": "QQWzM9FppiwhNaw6VTL90tPQSHU=",
+			"path": "github.com/go-telegram-bot-api/telegram-bot-api",
+			"revision": "afe64e63be7f4c259261f3fb38dfe8b41f218e38",
+			"revisionTime": "2017-05-21T22:20:11Z"
 		}
 	],
-	"rootPath": "github.com/AntonioLangiu/hknbot"
+	"rootPath": "github.com/AntonioLangiu/holdthembot"
 }

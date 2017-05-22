@@ -8,6 +8,7 @@ import (
 
 type Configuration struct {
 	TelegramAPI    string
+    TempFolder     string
 }
 
 func LoadConfiguration() *Configuration {
@@ -25,6 +26,10 @@ func LoadConfiguration() *Configuration {
 	token := os.Getenv("TelegramAPI")
 	if token != "" {
 		configuration.TelegramAPI = token
+	}
+	token = os.Getenv("TempFolder")
+	if token != "" {
+		configuration.TempFolder = token
 	}
 	return &configuration
 }

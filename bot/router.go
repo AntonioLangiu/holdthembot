@@ -1,8 +1,7 @@
 package bot
 
 import (
-	"gopkg.in/telegram-bot-api.v4"
-	"log"
+    "github.com/go-telegram-bot-api/telegram-bot-api"
 	"strings"
 )
 
@@ -14,9 +13,9 @@ func RouteMessages(ctx *BotContext) {
         if update.Message.IsCommand() {
 			routeCommand(update, ctx)
         } else if update.Message.VideoNote != nil {
-            log.Print("video note!!!!\n\n\n\n")
+            ResendVideo(update, ctx)
         } else if update.Message.Voice != nil {
-            log.Print("audio!!!!\n\n\n\n")
+            ResendAudio(update, ctx)
 		} else if update.Message.Text == "" {
 			routeInvalid(update, ctx)
 		}
@@ -24,6 +23,8 @@ func RouteMessages(ctx *BotContext) {
 }
 
 func routeInvalid(update tgbotapi.Update, ctx *BotContext) {
+    out := "Sorry, this command is not supported! Send /help to understand how this bot works!"
+    SendText(update, ctx, out)
     HelpMessage(update, ctx)
 }
 
