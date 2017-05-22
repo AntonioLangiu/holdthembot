@@ -1,3 +1,4 @@
 {
-    "TelegramAPI": "Your Telegram Bot Api. Ask the Father of Bots (@BotFather) if you don't have one"
+    "TelegramAPI": "Your Telegram Bot Api. Ask the Father of Bots (@BotFather) if you don't have one",
+    "TempFolder": "Folder where received files will be saved"
 }
